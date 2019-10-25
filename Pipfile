@@ -1,0 +1,44 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+black = "==19.3b0"
+dvc = {extras = ["gs"],version = "*"}
+flake8 = "*"
+invoke = "*"
+isort = "*"
+jupyterthemes = "*"
+jupyter-contrib-nbextensions = "*"
+jupyter-nbextensions-configurator = "*"
+mypy = "*"
+pep8 = "*"
+pycodestyle = "*"
+pycodestyle-magic = "*"
+tox = "*"
+
+[packages]
+ipython = "*"
+jupyter = "*"
+matplotlib = "*"
+numpy = "*"
+pandas = "*"
+scikit-learn = "*"
+seaborn = "*"
+tqdm = "*"
+plotly = "*"
+lightgbm = "*"
+xgboost = "*"
+
+[pipenv]
+allow_prereleases = true
+
+[requires]
+python_version = "3.7"
+
+[scripts]
+check = "invoke check"
+format = "invoke format"
+libs = "invoke libs"
+test = "tox -p all"
