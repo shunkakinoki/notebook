@@ -16,14 +16,6 @@
         ]
     },
     "default": {
-        "appnope": {
-            "hashes": [
-                "sha256:5b26757dc6f79a3b7dc9fab95359328d5747fcb2409d331ea66d0272b90ab2a0",
-                "sha256:8b995ffe925347a2138d7ac0fe77155e4311a0ea6d6da4f5128fe4b3cbe5ed71"
-            ],
-            "markers": "platform_system == 'Darwin'",
-            "version": "==0.1.0"
-        },
         "attrs": {
             "hashes": [
                 "sha256:08a96c641c3a74e44eb59afb61a24f2cb9f4d7188748e76ba4bb5edfa3cb7d1c",
@@ -641,14 +633,6 @@
             ],
             "version": "==1.4.3"
         },
-        "appnope": {
-            "hashes": [
-                "sha256:5b26757dc6f79a3b7dc9fab95359328d5747fcb2409d331ea66d0272b90ab2a0",
-                "sha256:8b995ffe925347a2138d7ac0fe77155e4311a0ea6d6da4f5128fe4b3cbe5ed71"
-            ],
-            "markers": "platform_system == 'Darwin'",
-            "version": "==0.1.0"
-        },
         "asciimatics": {
             "hashes": [
                 "sha256:1d0871133c95fa15c603d471ebb77e39b3389877e2ff2ad5ab3bc906d81b5e8c",
@@ -779,11 +763,11 @@
                 "gs"
             ],
             "hashes": [
-                "sha256:9128009318d96843b0e0de2533b0dd7b8125891d4697e0fee5befa66b418270a",
-                "sha256:ae377b3fadd2cc2aec245fd3c075f729458704e1c1bea192ab4aad8e2fe35273"
+                "sha256:2512f3d93c392c7243b2710dd384387f282c5fbb72ad891d6e4c48a12343a58b",
+                "sha256:628d176accd37a31385e64145f75d6ccfd517c4e3e2f3ad47c817fc3a60c928e"
             ],
             "index": "pypi",
-            "version": "==0.65.0"
+            "version": "==0.66.0"
         },
         "entrypoints": {
             "hashes": [
