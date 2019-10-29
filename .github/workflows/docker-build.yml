@@ -27,3 +27,8 @@ jobs:
           USERNAME: ${{ secrets.DOCKER_USERNAME }}
           PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
           BASE_NAME: ${{ github.repository }}
+      - name: Label on PR
+        uses: awact/label-action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ADD_LABEL: "gha-docker"
