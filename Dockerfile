@@ -66,9 +66,9 @@ RUN git clone https://github.com/lambdalisue/jupyter-vim-binding vim_binding \
 
 RUN jupyter nbextension enable vim_binding/vim_binding
 
-## Enable Nbextensions (Reference URL: https://qiita.com/simonritchie/items/88161c806197a0b84174)
-
 WORKDIR /app
+
+## Enable Nbextensions (Reference URL: https://qiita.com/simonritchie/items/88161c806197a0b84174)
 
 # Table Beautifier
 RUN jupyter nbextension enable table_beautifier/main
