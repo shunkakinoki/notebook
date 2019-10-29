@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "32bfce5b940a40fc88b284087945f8eb8bace3a8affd8e20a2a7d18566617219"
+            "sha256": "22b0adce17de3ccca4d8eca841c74f9353163fd56605e54d983ebdfed2b6a615"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -29,7 +29,7 @@
                 "sha256:5b26757dc6f79a3b7dc9fab95359328d5747fcb2409d331ea66d0272b90ab2a0",
                 "sha256:8b995ffe925347a2138d7ac0fe77155e4311a0ea6d6da4f5128fe4b3cbe5ed71"
             ],
-            "markers": "sys_platform == 'darwin'",
+            "markers": "platform_system == 'Darwin'",
             "version": "==0.1.0"
         },
         "asciimatics": {
@@ -858,16 +858,7 @@
                 "sha256:95a2219d12372f05704562a14ec30bc76b05a5b297b21a5dfe3f6fac3491ae56",
                 "sha256:e40a936c9a450ad81df37f549d676d127b1b66000a6c500caa2b085bc0ca976c"
             ],
-            "index": "pypi",
             "version": "==2.5.0"
-        },
-        "pycodestyle-magic": {
-            "hashes": [
-                "sha256:0059288f6479c34b92bd33e8a15c57fd93721d9b4464af0511b7e6d1221f7108",
-                "sha256:b3765c2e26dc72a387d23277ea788be2db7b2393043fb723754c7cb924f8fefe"
-            ],
-            "index": "pypi",
-            "version": "==0.5"
         },
         "pyfiglet": {
             "hashes": [

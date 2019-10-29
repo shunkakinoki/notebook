@@ -15,8 +15,6 @@ jupyter-contrib-nbextensions = "*"
 jupyter-nbextensions-configurator = "*"
 mypy = "*"
 pep8 = "*"
-pycodestyle = "*"
-pycodestyle-magic = "*"
 tox = "*"
 
 [packages]
