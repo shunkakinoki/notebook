@@ -2,6 +2,8 @@ pull_request_rules:
   - name: Automatic Merge for gitHub-actions[bot] Pull Requests
     conditions:
       - author=github-actions[bot]
+      - status-success=Build Docker Image / build (pull_request)
+      - status-success=Hadolint / hadolint (pull_request)
       - status-success=WIP
     actions:
       delete_head_branch:
@@ -13,6 +15,8 @@ pull_request_rules:
   - name: Automatic Merge for dependabot[bot] Pull Requests
     conditions:
       - author=dependabot[bot]
+      - status-success=Build Docker Image / build (pull_request)
+      - status-success=Hadolint / hadolint (pull_request)
       - status-success=WIP
     actions:
       delete_head_branch:
@@ -24,6 +28,7 @@ pull_request_rules:
   - name: Automatic Merge for dependabot-preview[bot] Pull Requests
     conditions:
       - author=dependabot-preview[bot]
+      - status-success=Build Docker Image / build (pull_request)
       - status-success=WIP
     actions:
       delete_head_branch:
