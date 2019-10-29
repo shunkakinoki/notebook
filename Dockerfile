@@ -54,7 +54,7 @@ RUN jupyter nbextension install https://github.com/drillan/jupyter-black/archive
 RUN jupyter nbextension install https://github.com/benjaminabel/jupyter-isort/archive/master.zip --user \
     && jupyter nbextension enable jupyter-isort-master/jupyter-isort
 
-# # Install Jupyter Vim
+# Install Jupyter Vim
 ARG data_dir="$(jupyter --data-dir)/nbextensions"
 
 RUN mkdir -p data_dir
