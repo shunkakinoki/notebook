@@ -2,7 +2,7 @@ name: Hadolint
 on: pull_request
 jobs:
   hadolint:
-    name: hadolint on pr
+    name: Run Hadolint
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
