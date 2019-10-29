@@ -6,7 +6,7 @@ FROM nvidia/cuda:10.1-base-ubuntu18.04
 
 # Install Basic Utilities
 RUN apt-get update \
-    && apt-get install -y \
+    && apt-get install -y --no-install-recommends \
     curl \
     ca-certificates \
     sudo \
@@ -15,15 +15,11 @@ RUN apt-get update \
     libx11-6 \
     libffi-dev \
     software-properties-common \
-    && add-apt-repository ppa:jonathonf/python-3.7 \
-    && rm -rf /var/lib/apt/lists/*
-
-# Install Python3.6
-RUN apt-get update \
-    && apt-get install -y \
     python3.7 \
     python3.7-dev \
-    python3-pip
+    python3-pip \
+    && add-apt-repository ppa:jonathonf/python-3.7 \
+    && rm -rf /var/lib/apt/lists/*
 
 # Add Backwards Compatibility
 RUN rm -rf /usr/bin/python3 && ln /usr/bin/python3.7 /usr/bin/python3
@@ -33,7 +29,7 @@ ENV LC_ALL=C.UTF-8
 ENV LANG=C.UTF-8
 
 # Install Pip3 Pipenv
-RUN pip3 install pipenv
+RUN pip3 install pipenv==2018.11.26
 
 # Create a working directory
 RUN mkdir /app
@@ -59,13 +55,20 @@ RUN jupyter nbextension install https://github.com/benjaminabel/jupyter-isort/ar
     && jupyter nbextension enable jupyter-isort-master/jupyter-isort
 
 # # Install Jupyter Vim
-RUN mkdir -p $(jupyter --data-dir)/nbextensions \
-    && cd $(jupyter --data-dir)/nbextensions \ 
-    && git clone https://github.com/lambdalisue/jupyter-vim-binding vim_binding \
+ARG data_dir="$(jupyter --data-dir)/nbextensions"
+
+RUN mkdir -p data_dir
+
+WORKDIR ${data_dir}
+
+RUN git clone https://github.com/lambdalisue/jupyter-vim-binding vim_binding \
     && chmod -R go-w vim_binding 
+
 RUN jupyter nbextension enable vim_binding/vim_binding
 
 ## Enable Nbextensions (Reference URL: https://qiita.com/simonritchie/items/88161c806197a0b84174)
+
+WORKDIR /app
 
 # Table Beautifier
 RUN jupyter nbextension enable table_beautifier/main

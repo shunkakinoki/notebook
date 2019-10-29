@@ -4,32 +4,20 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [dev-packages]
-black = "==19.10b0"
+black = "==19.3b0"
 dvc = {extras = ["gs"],version = "*"}
 flake8 = "*"
 invoke = "*"
 isort = "*"
+jupyter = "*"
 jupyterthemes = "*"
 jupyter-contrib-nbextensions = "*"
 jupyter-nbextensions-configurator = "*"
 mypy = "*"
 pep8 = "*"
-pycodestyle = "*"
-pycodestyle-magic = "*"
 tox = "*"
 
 [packages]
-ipython = "*"
-jupyter = "*"
-matplotlib = "*"
-numpy = "*"
-pandas = "*"
-scikit-learn = "*"
-seaborn = "*"
-tqdm = "*"
-plotly = "*"
-lightgbm = "*"
-xgboost = "*"
 
 [pipenv]
 allow_prereleases = true
