@@ -9,6 +9,7 @@ dvc = {extras = ["gs"],version = "*"}
 flake8 = "*"
 invoke = "*"
 isort = "*"
+jupyter = "*"
 jupyterthemes = "*"
 jupyter-contrib-nbextensions = "*"
 jupyter-nbextensions-configurator = "*"
@@ -19,17 +20,6 @@ pycodestyle-magic = "*"
 tox = "*"
 
 [packages]
-ipython = "*"
-jupyter = "*"
-matplotlib = "*"
-numpy = "*"
-pandas = "*"
-scikit-learn = "*"
-seaborn = "*"
-tqdm = "*"
-plotly = "*"
-lightgbm = "*"
-xgboost = "*"
 
 [pipenv]
 allow_prereleases = true
