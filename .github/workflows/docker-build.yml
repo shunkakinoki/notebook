@@ -1,12 +1,5 @@
 name: Build Docker Image
 on:
-  push:
-    branches:
-      - master
-    paths:
-      - "Dockerfile"
-      - "Pipfile"
-      - "Pipfile.lock"
   pull_request:
     paths:
       - "Dockerfile"
