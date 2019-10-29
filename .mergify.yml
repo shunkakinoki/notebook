@@ -1,3 +1,4 @@
+pull_request_rules:
   - name: Automatic Merge for dependabot[bot] Pull Requests
     conditions:
       - author=dependabot[bot]
