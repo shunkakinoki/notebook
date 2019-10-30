@@ -154,11 +154,11 @@
                 "gs"
             ],
             "hashes": [
-                "sha256:8c231e9550bba001fb3492bedbba505e5a3031e820613f2d34de1b3cb92c9ab9",
-                "sha256:9577be0122fc2c63a26de9385fb1af45489ec13d5a8fc9f462938390c40f343f"
+                "sha256:3f722abb1d8574c842f7db910ad0d89c1e37253c4091da0993e18a54edf49ac2",
+                "sha256:b12997abf30e47e5e597568230440e522cb33839912cb752a6fb226b3913063f"
             ],
             "index": "pypi",
-            "version": "==0.66.1"
+            "version": "==0.66.2"
         },
         "entrypoints": {
             "hashes": [
@@ -249,7 +249,6 @@
                 "sha256:2a8fd188afe1cbfd5998bf20602f76b0336aa892de88fe842a806b9a3ed78d2a",
                 "sha256:b86140d5a0b6d290084b11bde90ee9aecad357ba0e0d67388d016b8340320927"
             ],
-            "index": "pypi",
             "version": "==0.5.0"
         },
         "googleapis-common-protos": {
