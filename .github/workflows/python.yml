@@ -42,8 +42,3 @@ jobs:
       - name: Run test with Tox
         run: |
           pipenv run tox -e libs,flake8,mypy,format -p all
-      - name: Label on PR
-        uses: awact/label-action@master
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          ADD_LABEL: "gha-python-eda"
