@@ -4,10 +4,14 @@ on:
     branches:
       - master
     paths:
+      - "Pipfile"
+      - "Pipfile.lock"
       - "**.py"
       - "**.ipynb"
   pull_request:
     paths:
+      - "Pipfile"
+      - "Pipfile.lock"
       - "**.py"
       - "**.ipynb"
 jobs:
@@ -40,3 +44,8 @@ jobs:
       - name: Run test with Tox
         run: |
           pipenv run tox -p all
+      - name: Label on PR
+        uses: awact/label-action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ADD_LABEL: "gha-python-eda"
