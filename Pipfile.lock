@@ -154,11 +154,11 @@
                 "gs"
             ],
             "hashes": [
-                "sha256:3f722abb1d8574c842f7db910ad0d89c1e37253c4091da0993e18a54edf49ac2",
-                "sha256:b12997abf30e47e5e597568230440e522cb33839912cb752a6fb226b3913063f"
+                "sha256:0dcc8f7eb5fe7d1fe6b0266b5ffc3246109f93cf55876bef48ec13bdd1d680c7",
+                "sha256:c003e700d3bd5817f9fe85e214331e46351ddfffa4d465fae9ad6c8fcdee1fe6"
             ],
             "index": "pypi",
-            "version": "==0.66.2"
+            "version": "==0.66.4"
         },
         "entrypoints": {
             "hashes": [
@@ -891,7 +891,6 @@
                 "sha256:73ebfe9dbf22e832286dafa60473e4cd239f8592f699aa5adaf10050e6e1823c",
                 "sha256:75bb3f31ea686f1197762692a9ee6a7550b59fc6ca3a1f4b5d7e32fb98e2da2a"
             ],
-            "index": "pypi",
             "version": "==2.8.1"
         },
         "pytz": {
