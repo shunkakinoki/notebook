@@ -154,11 +154,11 @@
                 "gs"
             ],
             "hashes": [
-                "sha256:859dbf124f525a89fb58ff95bb13dad77dc80cdea132f0e305211f852ee9e10b",
-                "sha256:b9d6212461a74f2740513903e9c85265c1b53ff8aa9bc32d5eb117216c52eb82"
+                "sha256:345f2e43f3b03d2b7e29fc9ff92c6f1e2e0666c9fbe30fde4a03108a8d90f869",
+                "sha256:a7492a6bce157929fa81cfd8e4732ff86a46e8f5541c26ad804e1cbd2fb6114e"
             ],
             "index": "pypi",
-            "version": "==0.66.6"
+            "version": "==0.66.8"
         },
         "entrypoints": {
             "hashes": [
@@ -875,10 +875,10 @@
         },
         "pyparsing": {
             "hashes": [
-                "sha256:0961bf3429691b9cd7e3695a37ee8bc18e95c56ac1271dc2bbc41697062d1b6d",
-                "sha256:8997c62f779045b07273e124bbe1d03e2eebb9a38a7ef0798fea4bae72b4b6a3"
+                "sha256:4acadc9a2b96c19fe00932a38ca63e601180c39a189a696abce1eaab641447e1",
+                "sha256:61b5ed888beab19ddccab3478910e2076a6b5a0295dffc43021890e136edf764"
             ],
-            "version": "==2.4.3"
+            "version": "==2.4.4"
         },
         "pyrsistent": {
             "hashes": [
