@@ -154,11 +154,11 @@
                 "gs"
             ],
             "hashes": [
-                "sha256:859dbf124f525a89fb58ff95bb13dad77dc80cdea132f0e305211f852ee9e10b",
-                "sha256:b9d6212461a74f2740513903e9c85265c1b53ff8aa9bc32d5eb117216c52eb82"
+                "sha256:aeae42b0703c2bdbf2c6c76b4e24a27d688e0f2b0fb3af82425b7f2743b1d5ca",
+                "sha256:b6cc99725506635d96eb3972be9fbb87f2c071398f40fcf3d4f899fb6089edbd"
             ],
             "index": "pypi",
-            "version": "==0.66.6"
+            "version": "==0.66.9"
         },
         "entrypoints": {
             "hashes": [
@@ -288,10 +288,10 @@
         },
         "inflect": {
             "hashes": [
-                "sha256:750691d56f663cef75993a63029d67b6ef772aeaa6e318a46b3d832cbd902760",
-                "sha256:86da0500226d67531feb1f4f539a24129f187dac8b5965445ea77f345e15a2a0"
+                "sha256:48a35748cd695881722699d074a61166a2b591cc8c65d5c95d00e59c847b01c2",
+                "sha256:ee7c9b7c3376d06828b205460afb3c447b5d25dd653171db249a238f3fc2c18a"
             ],
-            "version": "==3.0.1"
+            "version": "==3.0.2"
         },
         "invoke": {
             "hashes": [
@@ -878,7 +878,6 @@
                 "sha256:4acadc9a2b96c19fe00932a38ca63e601180c39a189a696abce1eaab641447e1",
                 "sha256:61b5ed888beab19ddccab3478910e2076a6b5a0295dffc43021890e136edf764"
             ],
-            "index": "pypi",
             "version": "==2.4.4"
         },
         "pyrsistent": {
