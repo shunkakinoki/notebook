@@ -154,11 +154,11 @@
                 "gs"
             ],
             "hashes": [
-                "sha256:5322769b2a7d4e0a8768ddb474a03f48fe586dd920b6dc2bce839f4c098826c2",
-                "sha256:6d5ba7d8d275924fda5f9190795136826813ffeb344302fa5ac0882ef1e849d4"
+                "sha256:0edc355947214880c0ccf79e4efcd7a84fedb98a2705b9d4d2ca9ddec182bb2d",
+                "sha256:debe61c39f14f7a9686a52da91264127281eba54d7d48dcb157d30af2cdac5cb"
             ],
             "index": "pypi",
-            "version": "==0.66.10"
+            "version": "==0.68.1"
         },
         "entrypoints": {
             "hashes": [
@@ -1081,7 +1081,6 @@
                 "sha256:9de4722323451eb7818deb0161d9d5523465353a6707a9f500d97ee42919b902",
                 "sha256:c1d677f3a85fa291b34bdf8f770f877119b9754b32673699653556f85e2c2f13"
             ],
-            "index": "pypi",
             "version": "==4.38.0"
         },
         "traitlets": {
