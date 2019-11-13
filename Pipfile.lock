@@ -225,10 +225,11 @@
         },
         "google-auth": {
             "hashes": [
-                "sha256:8b67e34a07055b9785948ff9d3e044f93be9019f4f69711b04450087ae150817",
-                "sha256:cf60c71698f90177e044c8df1e2915a6da372a99d2af0e236d76c426aaf4f114"
+                "sha256:84105be98837fb8436e9d0bcb7a279fd85fa1d97bb35a077e70ba2fb95bcc983",
+                "sha256:baf1b3f8b29a5f96f66753ad848473699322b63f4d68964e510554b12d002443"
             ],
-            "version": "==1.7.0"
+            "index": "pypi",
+            "version": "==1.7.1"
         },
         "google-cloud-core": {
             "hashes": [
@@ -1042,7 +1043,6 @@
                 "sha256:4804a774f802306a7d9af7322193c5390f1da0abb429e082a10ef1d46e6fb2c2",
                 "sha256:a43dcb3e353bc680dd0783b1d9c3fc28d529f190bc54ba9a229f72fe6e7a54d7"
             ],
-            "index": "pypi",
             "version": "==0.8.3"
         },
         "testpath": {
