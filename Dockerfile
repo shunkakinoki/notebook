@@ -43,9 +43,18 @@ COPY Pipfile.lock Pipfile.lock
 # Install Dependencies
 RUN set -ex && pipenv install --dev --system --ignore-pipfile --deploy
 
-# Install jupyterlab
-RUN pip install jupyterlab \
-    && jupyter serverextension enable --py jupyterlab
+ARG data_dir="$(jupyter --data-dir)/nbextensions"
+
+RUN mkdir -p data_dir
+
+WORKDIR ${data_dir}
+
+RUN git clone https://github.com/lambdalisue/jupyter-vim-binding vim_binding \
+    && chmod -R go-w vim_binding 
+
+RUN jupyter nbextension enable vim_binding/vim_binding
+
+WORKDIR /app
 
 # Install Jupyter Notebook Extensions
 RUN jupyter contrib nbextension install --user \
@@ -69,12 +78,6 @@ RUN jupyter nbextension enable table_beautifier/main \
     && jupyter nbextension enable codefolding/main \
     && jupyter nbextension enable varInspector/main \
     && jupyter nbextension enable notify/notify 
-
-# Setup jupyter-vim
-RUN mkdir -p $(jupyter --data-dir)/nbextensions \
-    && cd $(jupyter --data-dir)/nbextensions \
-    && git clone https://github.com/lambdalisue/jupyter-vim-binding vim_binding \
-    && jupyter nbextension enable vim_binding/vim_binding
 
 # # Change Theme
 RUN jt -t chesterish -T -f roboto -fs 9 -tf merriserif -tfs 11 -nf ptsans -nfs 11 -dfs 8 -ofs 8 -cellw 99% \
