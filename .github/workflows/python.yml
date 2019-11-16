@@ -1,4 +1,4 @@
-name: Python Check Format, Sorting, and Type-Check
+name: Python
 on:
   push:
     branches:
