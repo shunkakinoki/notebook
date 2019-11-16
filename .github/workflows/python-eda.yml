@@ -1,4 +1,4 @@
-name: Python EDA Check Format, Sorting, and Type-Check
+name: Python EDA
 on:
   push:
     branches:
