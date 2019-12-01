@@ -1,8 +1,5 @@
 name: Hadolint
-on:
-  pull_request:
-    paths:
-      - "Dockerfile"
+on: pull_request
 jobs:
   hadolint:
     runs-on: ubuntu-latest

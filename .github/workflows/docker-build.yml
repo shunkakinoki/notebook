@@ -1,10 +1,5 @@
 name: Build Docker Image
-on:
-  pull_request:
-    paths:
-      - "Dockerfile"
-      - "Pipfile"
-      - "Pipfile.lock"
+on: pull_request
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -20,8 +15,3 @@ jobs:
           USERNAME: ${{ secrets.DOCKER_USERNAME }}
           PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
           BASE_NAME: ${{ github.repository }}
-      - name: Label on PR
-        uses: awact/label-action@master
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          ADD_LABEL: "gha-docker"
