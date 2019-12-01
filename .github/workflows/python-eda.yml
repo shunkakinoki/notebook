@@ -1,21 +1,7 @@
 name: Python EDA
-on:
-  push:
-    branches:
-      - master
-    paths:
-      - "Pipfile"
-      - "Pipfile.lock"
-      - "**.py"
-      - "**.ipynb"
-  pull_request:
-    paths:
-      - "Pipfile"
-      - "Pipfile.lock"
-      - "**.py"
-      - "**.ipynb"
+on: push
 jobs:
-  build:
+  python-eda:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
@@ -44,8 +30,3 @@ jobs:
       - name: Run test with Tox
         run: |
           pipenv run tox -p all
-      - name: Label on PR
-        uses: awact/label-action@master
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          ADD_LABEL: "gha-python-eda"

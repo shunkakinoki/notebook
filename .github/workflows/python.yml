@@ -1,19 +1,7 @@
 name: Python
-on:
-  push:
-    branches:
-      - master
-    paths:
-      - "Pipfile"
-      - "Pipfile.lock"
-      - "**.py"
-  pull_request:
-    paths:
-      - "Pipfile"
-      - "Pipfile.lock"
-      - "**.py"
+on: push
 jobs:
-  build:
+  python:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
