@@ -1,6 +1,7 @@
-from packaging.version import parse
 from configparser import ConfigParser
+
 import setuptools
+from packaging.version import parse
 
 assert parse(setuptools.__version__) >= parse("36.2")
 
