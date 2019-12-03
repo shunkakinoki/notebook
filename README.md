@@ -15,7 +15,7 @@
 <div class="codecell" markdown="1">
 <div class="input_area" markdown="1">
 
-```
+```python
 print("Hello World")
 ```
 
