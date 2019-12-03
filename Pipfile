@@ -10,12 +10,15 @@ flake8 = "*"
 invoke = "*"
 isort = "*"
 jupyter = "*"
+jupyterlab = "*"
 jupyterthemes = "*"
 jupyter-contrib-nbextensions = "*"
+jupyter-lsp = "*"
 jupyter-nbextensions-configurator = "*"
 mypy = "*"
 nbdev = "*"
 pep8 = "*"
+python-language-server = {extras = ["all"],version = "*"}
 tox = "*"
 
 [packages]
