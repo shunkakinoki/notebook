@@ -16,21 +16,14 @@ RUN apt-get update \
     libx11-6 \
     libffi-dev \
     software-properties-common \
-    python3.7 \
-    python3.7-dev \
-    python3-pip \
-    && add-apt-repository ppa:jonathonf/python-3.7 \
     && rm -rf /var/lib/apt/lists/*
-
-# Add Backwards Compatibility
-RUN rm -rf /usr/bin/python3 && ln /usr/bin/python3.7 /usr/bin/python3
 
 # Set Env Variables
 ENV LC_ALL=C.UTF-8
 ENV LANG=C.UTF-8
 
 # Install Pip3 Pipenv
-RUN pip3 install pipenv==2018.11.26
+RUN pip install pipenv==2018.11.26
 
 # Create a working directory
 RUN mkdir /app
