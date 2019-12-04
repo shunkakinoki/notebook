@@ -15,7 +15,7 @@ jobs:
           pip install pipenv
       - name: Cache pipenv
         id: cache
-        uses: actions/cache@preview
+        uses: actions/cache@v1
         with:
           path: .venv
           key: pipenv-${{ hashFiles('**/Pipfile.lock') }}

@@ -4,7 +4,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@v1
       - name: Build Docker Image with DockerHub
         run: |
           cd $GITHUB_WORKSPACE
