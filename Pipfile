@@ -5,16 +5,10 @@ verify_ssl = true
 
 [dev-packages]
 black = "==19.3b0"
-dvc = {extras = ["gs"],version = "*"}
-flake8 = "*"
+dvc = {extras = ["aws", "gs"],version = "*"}
 invoke = "*"
 isort = "*"
-jupyter = "*"
 jupyterlab = "*"
-jupyterthemes = "*"
-jupyter-contrib-nbextensions = "*"
-jupyter-lsp = "*"
-jupyter-nbextensions-configurator = "*"
 mypy = "*"
 pep8 = "*"
 python-language-server = {extras = ["all"],version = "*"}
