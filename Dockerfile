@@ -48,10 +48,6 @@ COPY Pipfile.lock Pipfile.lock
 RUN jq -r '.default | to_entries[] | .key + .value.version' \
     Pipfile.lock > requirements.txt
 
-# Upgraade Pip
-# hadolint ignore=DL3013
-RUN pip install -U pip
-
 # Install Libraries
 RUN pip install -r requirements.txt 
 
