@@ -9,6 +9,7 @@ dvc = {extras = ["aws", "gs"],version = "*"}
 invoke = "*"
 isort = "*"
 jupyterlab = "*"
+metaflow = "*"
 mypy = "*"
 pep8 = "*"
 python-language-server = {extras = ["all"],version = "*"}
