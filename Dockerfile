@@ -1,8 +1,9 @@
 # References:
 # https://github.com/anibali/docker-pytorch/blob/master/cuda-10.0/Dockerfile
 # https://github.com/pypa/pipenv/blob/master/Dockerfile
+# https://github.com/kiccho1101/kaggle-python-docker/blob/master/Dockerfile
 
-FROM nvidia/cuda:10.1-base-ubuntu18.04
+FROM gcr.io/kaggle-images/python:v69
 
 # Install Basic Utilities
 RUN apt-get update \
@@ -15,21 +16,25 @@ RUN apt-get update \
     libx11-6 \
     libffi-dev \
     software-properties-common \
-    python3.7 \
-    python3.7-dev \
-    python3-pip \
-    && add-apt-repository ppa:jonathonf/python-3.7 \
     && rm -rf /var/lib/apt/lists/*
 
-# Add Backwards Compatibility
-RUN rm -rf /usr/bin/python3 && ln /usr/bin/python3.7 /usr/bin/python3
+# Install Jq to Parse Json within Bash Scripts
+# Reference:
+# https://hub.docker.com/r/pindar/jq/dockerfile
+RUN curl -o /usr/local/bin/jq http://stedolan.github.io/jq/download/linux64/jq && \
+    chmod +x /usr/local/bin/jq
+
+# Install Node JS
+SHELL ["/bin/bash", "-o", "pipefail", "-c"]
+RUN curl -sL https://deb.nodesource.com/setup_11.x  | bash -
+RUN apt-get -y  --no-install-recommends install nodejs
 
 # Set Env Variables
 ENV LC_ALL=C.UTF-8
 ENV LANG=C.UTF-8
 
 # Install Pip3 Pipenv
-RUN pip3 install pipenv==2018.11.26
+RUN pip install pipenv==2018.11.26
 
 # Create a working directory
 RUN mkdir /app
@@ -39,65 +44,28 @@ WORKDIR /app
 COPY Pipfile Pipfile
 COPY Pipfile.lock Pipfile.lock
 
+# Generate `requirements.txt`
+RUN jq -r '.default | to_entries[] | .key + .value.version' \
+    Pipfile.lock > requirements.txt
+
+# Upgraade Pip
+# hadolint ignore=DL3013
+RUN pip install -U pip
+
+# Install Libraries
+RUN pip install -r requirements.txt 
+
 # Install Dependencies
-RUN set -ex && pipenv install --dev --system --ignore-pipfile --deploy
+# RUN set -ex && pipenv install --dev --system --ignore-pipfile --deploy
 
-# Install Jupyter Notebook Extensions
-RUN jupyter contrib nbextension install --user \
-    && jupyter nbextensions_configurator enable --user
-
-# Install Jupyter Black
-RUN jupyter nbextension install https://github.com/drillan/jupyter-black/archive/master.zip --user \
-    && jupyter nbextension enable jupyter-black-master/jupyter-black
-
-# Install Jupyter Isort
-RUN jupyter nbextension install https://github.com/benjaminabel/jupyter-isort/archive/master.zip --user \
-    && jupyter nbextension enable jupyter-isort-master/jupyter-isort
-
-# Install Jupyter Vim
-ARG data_dir="$(jupyter --data-dir)/nbextensions"
-
-RUN mkdir -p data_dir
-
-WORKDIR ${data_dir}
-
-RUN git clone https://github.com/lambdalisue/jupyter-vim-binding vim_binding \
-    && chmod -R go-w vim_binding 
-
-RUN jupyter nbextension enable vim_binding/vim_binding
-
-WORKDIR /app
-
-## Enable Nbextensions (Reference URL: https://qiita.com/simonritchie/items/88161c806197a0b84174)
-
-# Table Beautifier
-RUN jupyter nbextension enable table_beautifier/main
-
-# Table of Contents
-RUN jupyter nbextension enable toc2/main
-
-# Toggle all line numbers
-RUN jupyter nbextension enable toggle_all_line_numbers/main
-
-# AutoSaveTime
-RUN jupyter nbextension enable autosavetime/main
-
-# Collapsible Headings
-RUN jupyter nbextension enable collapsible_headings/main
-
-# Execute Time
-RUN jupyter nbextension enable execute_time/ExecuteTime
-
-# Codefolding
-RUN jupyter nbextension enable codefolding/main
-
-# Notify
-RUN jupyter nbextension enable notify/notify
-
-# Change Theme
-RUN jt -t chesterish -T -f roboto -fs 9 -tf merriserif -tfs 11 -nf ptsans -nfs 11 -dfs 8 -ofs 8 \
-    && sed -i '1s/^/.edit_mode .cell.selected .CodeMirror-focused:not(.cm-fat-cursor) { background-color: #1a0000 !important; }\n /' /root/.jupyter/custom/custom.css \
-    && sed -i '1s/^/.edit_mode .cell.selected .CodeMirror-focused.cm-fat-cursor { background-color: #1a0000 !important; }\n /' /root/.jupyter/custom/custom.css
-
-# Set Configuration Password
-RUN jupyter notebook --generate-config
+# Install Jupyter Lab Extensions
+RUN jupyter labextension install jupyterlab_bokeh
+RUN jupyter labextension install jupyterlab_vim
+RUN jupyter labextension install jupyterlab-flake8
+RUN jupyter labextension install @jupyter-widgets/jupyterlab-manager
+RUN jupyter labextension install @jupyterlab/git
+RUN jupyter labextension install @jupyterlab/plotly-extension
+RUN jupyter labextension install @jupyterlab/toc
+RUN jupyter labextension install @krassowski/jupyterlab-lsp
+RUN jupyter labextension install @lckr/jupyterlab_variableinspector
+RUN jupyter labextension install @ryantam626/jupyterlab_code_formatter

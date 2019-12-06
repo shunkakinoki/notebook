@@ -4,7 +4,6 @@ topnav_title: notebook
 site_title: notebook
 company_name: Shun Kakinoki
 description: My Study Notebook
-# Add Google analytics id if you have one and want to use it here
 google_analytics: UA-134813374-9
 # See Search docs on nbdev.fast.ai for help with adding Search
 google_search:
