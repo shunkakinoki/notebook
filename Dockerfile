@@ -18,6 +18,12 @@ RUN apt-get update \
     software-properties-common \
     && rm -rf /var/lib/apt/lists/*
 
+# Install Jq to Parse Json within Bash Scripts
+# Reference:
+# https://hub.docker.com/r/pindar/jq/dockerfile
+RUN curl -o /usr/local/bin/jq http://stedolan.github.io/jq/download/linux64/jq && \
+    chmod +x /usr/local/bin/jq
+
 # Install Node JS
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 RUN curl -sL https://deb.nodesource.com/setup_11.x  | bash -
@@ -38,8 +44,19 @@ WORKDIR /app
 COPY Pipfile Pipfile
 COPY Pipfile.lock Pipfile.lock
 
+# Generate `requirements.txt`
+RUN jq -r '.default | to_entries[] | .key + .value.version' \
+    Pipfile.lock > requirements.txt
+
+# Upgraade Pip
+# hadolint ignore=DL3013
+RUN pip install -U pip
+
+# Install Libraries
+RUN pip install -r requirements.txt 
+
 # Install Dependencies
-RUN set -ex && pipenv install --dev --system --ignore-pipfile --deploy
+# RUN set -ex && pipenv install --dev --system --ignore-pipfile --deploy
 
 # Install Jupyter Lab Extensions
 RUN jupyter labextension install jupyterlab_bokeh
