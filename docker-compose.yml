@@ -3,7 +3,7 @@ services:
   lease-eda:
     image: shunkakinoki/notebook
     ports:
-      - "8888:8888"
+      - "${JUPYTER_PORT}:8888"
     volumes:
       - .:/app
-    command: jupyter notebook --ip 0.0.0.0 --no-browser --allow-root
+    command: jupyter lab --ip 0.0.0.0 --no-browser --allow-root
