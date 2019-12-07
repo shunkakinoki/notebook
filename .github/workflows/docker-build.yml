@@ -8,10 +8,9 @@ jobs:
       - name: Build Docker Image with DockerHub
         run: |
           cd $GITHUB_WORKSPACE
-          echo $GITHUB_BASE_REF
-          # echo ${PASSWORD} | docker login -u $USERNAME --password-stdin
-          # docker pull $BASE_NAME || true
-          # docker build --cache-from $BASE_NAME -t $BASE_NAME -f Dockerfile .
+          echo ${PASSWORD} | docker login -u $USERNAME --password-stdin
+          git diff -a --exit-code --no-ext-diff --no-prefix --unified=0 origin/master... Dockerfile | egrep "^\+" | grep -q "FROM" && true || docker pull $BASE_NAME
+          docker build --cache-from $BASE_NAME -t $BASE_NAME -f Dockerfile .
         env:
           USERNAME: ${{ secrets.DOCKER_USERNAME }}
           PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
