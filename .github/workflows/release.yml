@@ -1,0 +1,30 @@
+name: Release Notebook Package
+on:
+  push:
+    branches:
+      - master
+jobs:
+  pypi:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Set up Python 3.7
+        uses: actions/setup-python@v1
+        with:
+          python-version: 3.7
+      - name: Install pipenv package
+        run: |
+          python -m pip install --upgrade pip
+          pip install pipenv
+      - name: Install dependencies with pipenv
+        run: |
+          pipenv install --dev --system --ignore-pipfile --deploy
+      - name: Build Pypi Dist
+        run: |
+          make pypi
+      - name: Publish Pypi Package
+        if: github.event_name == 'push' && startsWith(github.event.ref, 'refs/tags')
+        uses: pypa/gh-action-pypi-publish@master
+        with:
+          user: __token__
+          password: ${{ secrets.PYPI_PASSWORD }}

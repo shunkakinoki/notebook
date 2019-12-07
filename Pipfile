@@ -14,6 +14,7 @@ mypy = "*"
 pep8 = "*"
 python-language-server = {extras = ["all"],version = "*"}
 tox = "*"
+twine = "*"
 
 [packages]
 
