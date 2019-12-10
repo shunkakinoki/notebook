@@ -24,14 +24,6 @@
             ],
             "version": "==1.4.3"
         },
-        "appnope": {
-            "hashes": [
-                "sha256:5b26757dc6f79a3b7dc9fab95359328d5747fcb2409d331ea66d0272b90ab2a0",
-                "sha256:8b995ffe925347a2138d7ac0fe77155e4311a0ea6d6da4f5128fe4b3cbe5ed71"
-            ],
-            "markers": "platform_system == 'Darwin'",
-            "version": "==0.1.0"
-        },
         "astroid": {
             "hashes": [
                 "sha256:71ea07f44df9568a75d0f354c49143a4575d90645e9fead6dfb52c26a85ed13a",
@@ -82,17 +74,17 @@
         },
         "boto3": {
             "hashes": [
-                "sha256:323a6936df64fc8637bb629a582e332610e6606fc199eae882f18b1ae705cabf",
-                "sha256:5cad688930e22c7edf434c34747cac058ae0de394999155e07ff848feb90f53d"
+                "sha256:05645414e586c53c82dec591a8d96ff5756d869a3236e971125fdb719bc78270",
+                "sha256:de15bb0fc8f19d6c3366dcc7f0faf2aa32486ea29cf72141820892b7c7ec5a42"
             ],
-            "version": "==1.10.35"
+            "version": "==1.10.36"
         },
         "botocore": {
             "hashes": [
-                "sha256:592948fa0d04577610c06185f50e213ca666472c32ec22eccf21d9b505341722",
-                "sha256:64db64cbb461a5970dcfed63a6d82729fce7850739f2322ff0fccf88e9259ecf"
+                "sha256:19dd144b5a65f813f72ada8cd05397bbb1b30dd8ff9f1a22e1fe011c27829a50",
+                "sha256:dc44349c362763af9da631c4755348aff4a4593ee98b0199ce83337d3ba11076"
             ],
-            "version": "==1.13.35"
+            "version": "==1.13.36"
         },
         "cachetools": {
             "hashes": [
@@ -481,11 +473,11 @@
         },
         "jupyterlab": {
             "hashes": [
-                "sha256:2a28d3ad4d13b8d4b97edd2d174ff39e85bd00986970f1b9362dbd1a146b4885",
-                "sha256:2d475f02b054b63836d161c7626292116b1e4b0870255e426f07ff843450e07f"
+                "sha256:805e8db1389dc372e5445897d5e785f13d7bfcb714631af66a6d3e3421f5592b",
+                "sha256:d37d0753b373f5c2e856d4e863c718f08afc1ecc5cdd8938604bdb1cec109333"
             ],
             "index": "pypi",
-            "version": "==2.0.0a3"
+            "version": "==2.0.0a4"
         },
         "jupyterlab-pygments": {
             "hashes": [
