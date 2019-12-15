@@ -17,6 +17,7 @@ python-language-server = {extras = ["all"],version = "*"}
 tox = "*"
 twine = "*"
 wheel = "*"
+secretstorage = "*"
 
 [packages]
 
