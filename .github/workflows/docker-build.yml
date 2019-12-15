@@ -1,15 +1,7 @@
 name: Build Docker Image
 on: pull_request
 jobs:
-  check:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v1
-      - name: Check for Files
-        run: |
-          git diff -a --exit-code --name-only origin/master... | grep -q "Pipfile\|Pipfile.lock\|Dockerfile"
   build:
-    needs: check
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
