@@ -18,6 +18,7 @@ tox = "*"
 twine = "*"
 wheel = "*"
 secretstorage = "*"
+shun-notebook = "*"
 
 [packages]
 
