@@ -9,5 +9,3 @@
 [![forthebadge](https://forthebadge.com/images/badges/no-ragrets.svg)](https://forthebadge.com)
 
 </div>
-
-`docker-compose pull && docker-compose up --build`

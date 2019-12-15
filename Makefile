@@ -21,3 +21,6 @@ dist: clean
 
 clean:
 	rm -rf dist
+
+build:
+	docker-compose pull && docker-compose up --build
