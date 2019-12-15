@@ -9,6 +9,7 @@ dvc = {extras = ["aws", "gs"],version = "*"}
 invoke = "*"
 isort = "*"
 jupyterlab = "*"
+jupyterlab-nvdashboard = "*"
 metaflow = "*"
 mypy = "*"
 pep8 = "*"
