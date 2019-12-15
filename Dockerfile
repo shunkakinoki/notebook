@@ -29,10 +29,6 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 RUN curl -sL https://deb.nodesource.com/setup_11.x  | bash -
 RUN apt-get -y  --no-install-recommends install nodejs
 
-# Set Env Variables
-ENV LC_ALL=C.UTF-8
-ENV LANG=C.UTF-8
-
 # Install Pip3 Pipenv
 RUN pip install pipenv==2018.11.26
 
