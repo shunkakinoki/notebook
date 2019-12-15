@@ -10,7 +10,7 @@ config = ConfigParser(delimiters=["="])
 config.read("settings.ini")
 cfg = config["DEFAULT"]
 
-cfg_keys = "version description keywords author author_email".split()
+cfg_keys = "description keywords author author_email".split()
 expected = (
     cfg_keys
     + "lib_name user branch license status min_python audience language".split()
@@ -64,5 +64,7 @@ setuptools.setup(
     long_description_content_type="text/markdown",
     zip_safe=False,
     entry_points={"console_scripts": cfg.get("console_scripts", "").split()},
+    use_scm_version=True,
+    setup_requires=["setuptools_scm"],
     **setup_cfg
 )
