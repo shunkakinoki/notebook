@@ -55,9 +55,6 @@ RUN pip install -r requirements.txt
 # RUN set -ex && pipenv install --dev --system --ignore-pipfile --deploy
 
 # Install Jupyter Lab Extensions
-RUN jupyter labextension install jupyterlab_bokeh
-RUN jupyter labextension install jupyterlab_vim
-RUN jupyter labextension install jupyterlab-flake8
 RUN jupyter labextension install @jupyter-widgets/jupyterlab-manager
 RUN jupyter labextension install @jupyterlab/git
 RUN jupyter labextension install @jupyterlab/plotly-extension
@@ -65,3 +62,7 @@ RUN jupyter labextension install @jupyterlab/toc
 RUN jupyter labextension install @krassowski/jupyterlab-lsp
 RUN jupyter labextension install @lckr/jupyterlab_variableinspector
 RUN jupyter labextension install @ryantam626/jupyterlab_code_formatter
+RUN jupyter labextension install jupyterlab_bokeh
+RUN jupyter labextension install jupyterlab_vim
+RUN jupyter labextension install jupyterlab-flake8
+RUN jupyter labextension install jupyterlab-nvdashboard
