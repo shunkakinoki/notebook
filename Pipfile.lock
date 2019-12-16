@@ -329,10 +329,10 @@
         },
         "google-auth": {
             "hashes": [
-                "sha256:bdf3af2b19368fc50ed0542b891bf64c2e92d8f207d92064a6cf1e1a1014d761",
-                "sha256:bf45ce767ac45704372a6d3677b4a036594a935f4e460e58c7accc3c36925f06"
+                "sha256:038a921618620491502eeb4ed5b7af6a8ee2a7950918a5b3e0d718e841aff4da",
+                "sha256:a977375be9f9c46cd20ffb90f0532a27fa0e171eb47373de270b6028005b8e8b"
             ],
-            "version": "==1.8.2"
+            "version": "==1.9.0"
         },
         "google-cloud-core": {
             "hashes": [
@@ -1161,11 +1161,11 @@
         },
         "shun-notebook": {
             "hashes": [
-                "sha256:5637d4784df68d12223c0a8173d10bd888b5b1a9c70d9eab89fab05959be8bb8",
-                "sha256:56c9e8ab835f8eaaa3164f4552dd7edb00d2a3828bf7d41e12c57958fbcd4ac9"
+                "sha256:1e9330ea8b7f4a099117a1da45ccbd173da5718ccbf1f34fcb7a74c951920f1d",
+                "sha256:21b5e450ad939b893d72672b022bec1f2ecc935931b17c9b835c746525e1a57d"
             ],
             "index": "pypi",
-            "version": "==0.2.6"
+            "version": "==0.2.7"
         },
         "simpervisor": {
             "hashes": [
