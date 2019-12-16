@@ -15,6 +15,7 @@ RUN apt-get update \
     bzip2 \
     libx11-6 \
     libffi-dev \
+    locale \
     software-properties-common \
     && rm -rf /var/lib/apt/lists/*
 
