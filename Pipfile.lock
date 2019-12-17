@@ -1161,11 +1161,11 @@
         },
         "shun-notebook": {
             "hashes": [
-                "sha256:7b9601f0fce819dcbb98c1122d15068b0ef59f85841409fcf68d293fd4ea95d6",
-                "sha256:8ff374ed2fc42d823528420635eee7fbde63009b0138920f40af7ce151d6a045"
+                "sha256:c532afd9fd9e7c7366c8ff44852e30392330fa7d7b35d2d345614a08d235369f",
+                "sha256:d23d0ed562877af93f557e83d7666a191408a0c57702866a39071aa2eed9df83"
             ],
             "index": "pypi",
-            "version": "==0.2.8"
+            "version": "==0.2.9"
         },
         "simpervisor": {
             "hashes": [
