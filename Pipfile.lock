@@ -322,17 +322,17 @@
         },
         "google-api-core": {
             "hashes": [
-                "sha256:b95895a9398026bc0500cf9b4a3f82c3f72c3f9150b26ff53af40c74e91c264a",
-                "sha256:df8adc4b97f5ab4328a0e745bee77877cf4a7d4601cb1cd5959d2bbf8fba57aa"
+                "sha256:2d661c8d650a1df5805d0e360121cb55c55d8bd29f858fa62cbe943e59ce89f7",
+                "sha256:9006e1641599345056cc690a934e1262107c78d969d72cf96412f6db5d32147f"
             ],
-            "version": "==1.14.3"
+            "version": "==1.15.0"
         },
         "google-auth": {
             "hashes": [
-                "sha256:bdf3af2b19368fc50ed0542b891bf64c2e92d8f207d92064a6cf1e1a1014d761",
-                "sha256:bf45ce767ac45704372a6d3677b4a036594a935f4e460e58c7accc3c36925f06"
+                "sha256:038a921618620491502eeb4ed5b7af6a8ee2a7950918a5b3e0d718e841aff4da",
+                "sha256:a977375be9f9c46cd20ffb90f0532a27fa0e171eb47373de270b6028005b8e8b"
             ],
-            "version": "==1.8.2"
+            "version": "==1.9.0"
         },
         "google-cloud-core": {
             "hashes": [
@@ -608,11 +608,11 @@
         },
         "metaflow": {
             "hashes": [
-                "sha256:666e5f816849b80a5b0bef8869c2c6c893aa15d33c49cfd8ae1e9480efd4bde7",
-                "sha256:a87e473280bd418f0a58e2d774994a05402d04a329835d2fbd38daa3d309cc21"
+                "sha256:2e163ddddcf11fe45da1dc5957705292576b0cc05736ffc6b475eff56ccb22d4",
+                "sha256:68f6e987d141bcf89f199d2249af7da5c4d11f06f2bdf0dc73c3b41cd65c7110"
             ],
             "index": "pypi",
-            "version": "==2.0.0"
+            "version": "==2.0.1"
         },
         "mistune": {
             "hashes": [
