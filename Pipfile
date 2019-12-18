@@ -19,6 +19,7 @@ twine = "*"
 wheel = "*"
 secretstorage = "*"
 shun-notebook = "*"
+pipenv-to-requirements = "*"
 
 [packages]
 

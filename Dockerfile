@@ -6,28 +6,28 @@
 FROM gcr.io/kaggle-images/python:v70
 
 # Install Basic Utilities
-RUN apt-get update \
-    && apt-get install -y --no-install-recommends \
-    curl \
-    ca-certificates \
-    sudo \
-    git \
-    bzip2 \
-    libx11-6 \
-    libffi-dev \
-    software-properties-common \
-    && rm -rf /var/lib/apt/lists/*
+RUN apt-get update &&
+    apt-get install -y --no-install-recommends \
+        curl \
+        ca-certificates \
+        sudo \
+        git \
+        bzip2 \
+        libx11-6 \
+        libffi-dev \
+        software-properties-common &&
+    rm -rf /var/lib/apt/lists/*
 
 # Install Jq to Parse Json within Bash Scripts
 # Reference:
 # https://hub.docker.com/r/pindar/jq/dockerfile
-RUN curl -o /usr/local/bin/jq http://stedolan.github.io/jq/download/linux64/jq && \
+RUN curl -o /usr/local/bin/jq http://stedolan.github.io/jq/download/linux64/jq &&
     chmod +x /usr/local/bin/jq
 
 # Install Node JS
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
-RUN curl -sL https://deb.nodesource.com/setup_11.x  | bash -
-RUN apt-get -y  --no-install-recommends install nodejs
+RUN curl -sL https://deb.nodesource.com/setup_11.x | bash -
+RUN apt-get -y --no-install-recommends install nodejs
 
 # Install Pip3 Pipenv
 RUN pip install pipenv==2018.11.26
@@ -41,11 +41,10 @@ COPY Pipfile Pipfile
 COPY Pipfile.lock Pipfile.lock
 
 # Generate `requirements.txt`
-RUN jq -r '.default | to_entries[] | .key + .value.version' \
-    Pipfile.lock > requirements.txt
+RUN pipenv run pipenv_to_requirements
 
 # Install Libraries
-RUN pip install -r requirements.txt 
+RUN pip install -r requirements-dev.txt
 
 # Install Dependencies
 # RUN set -ex && pipenv install --dev --system --ignore-pipfile --deploy
