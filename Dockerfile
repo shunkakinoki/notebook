@@ -30,7 +30,7 @@ RUN curl -sL https://deb.nodesource.com/setup_11.x | bash -
 RUN apt-get -y --no-install-recommends install nodejs
 
 # Install Pip3 Pipenv
-RUN pip install pipenv==2018.11.26
+RUN pip install pipenv==2018.11.26 pipenv-to-requirements==0.9.0
 
 # Create a working directory
 RUN mkdir /app
@@ -41,7 +41,7 @@ COPY Pipfile Pipfile
 COPY Pipfile.lock Pipfile.lock
 
 # Generate `requirements.txt`
-RUN pipenv run pipenv_to_requirements
+RUN pipenv_to_requirements
 
 # Install Libraries
 RUN pip install -r requirements-dev.txt
