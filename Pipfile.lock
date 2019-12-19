@@ -101,24 +101,24 @@
         },
         "boto3": {
             "hashes": [
-                "sha256:420a00c1835a0a890c853ad89cb0cebbe8f4a9d0af9333cc013690b836c44714",
-                "sha256:abea990bd63189680eaf032f687c29cfee670560e0eb9e394e39359f3e092ae5"
+                "sha256:06f5fd086dc4f7a09b1d36dd15f047878198ee87db5d1f85d7621596d163e254",
+                "sha256:40620839d08152911f0fb285fa4a91f4879ec71e0498f4d1f6e2cc30fddb3fb5"
             ],
-            "version": "==1.10.42"
+            "version": "==1.10.43"
         },
         "botocore": {
             "hashes": [
-                "sha256:9315d0e1940c3f860d21caaa23ab656f8c86ff2f700ac89e85894266bcd8fabf",
-                "sha256:f5e799a5d1f2f3d7d962e8a91c2cf637487a48fd153ab75537fddb7013b671ce"
+                "sha256:1c73eaf96a5f35741b72c382c5a19a97259f92271e919fd76a138991157610c4",
+                "sha256:5ac2108e44976730a514218be381cc0d83141e398fd7c55483b6ea2b181febd2"
             ],
-            "version": "==1.13.42"
+            "version": "==1.13.43"
         },
         "cachetools": {
             "hashes": [
-                "sha256:428266a1c0d36dc5aca63a2d7c5942e88c2c898d72139fca0e97fdd2380517ae",
-                "sha256:8ea2d3ce97850f31e4a08b0e2b5e6c34997d7216a9d2c98e0f3978630d4da69a"
+                "sha256:9a52dd97a85f257f4e4127f15818e71a0c7899f121b34591fcc1173ea79a0198",
+                "sha256:b304586d357c43221856be51d73387f93e2a961598a9b6b6670664746f3b6c6c"
             ],
-            "version": "==3.1.1"
+            "version": "==4.0.0"
         },
         "certifi": {
             "hashes": [
@@ -329,10 +329,10 @@
         },
         "google-auth": {
             "hashes": [
-                "sha256:038a921618620491502eeb4ed5b7af6a8ee2a7950918a5b3e0d718e841aff4da",
-                "sha256:a977375be9f9c46cd20ffb90f0532a27fa0e171eb47373de270b6028005b8e8b"
+                "sha256:7bb2034a3a290190cf4e3eb8ebf29e5025c90f0b06a00ba4d1fb94bf0c6448f7",
+                "sha256:c57074e594d2c6e3e316162734e8af3e15d40252022e69414cba67de66594417"
             ],
-            "version": "==1.9.0"
+            "version": "==1.10.0"
         },
         "google-cloud-core": {
             "hashes": [
@@ -1160,11 +1160,11 @@
         },
         "shun-notebook": {
             "hashes": [
-                "sha256:039f9d0a5c3a204fb04be29285d6ac80acc049c2be79476425d015d53259a966",
-                "sha256:a9002fa5a68f425a498ad0837abf103b8dcaf69238d23c43ce3becc7ac5bb8d1"
+                "sha256:f2a4b08af99db132189636ef8eabe11b78323c92822292bb41e500b8d71aaf4b",
+                "sha256:ffc381969ed86efab360123d0e50f43dfe43845fb45ba84b27479fe69ad3989f"
             ],
             "index": "pypi",
-            "version": "==0.2.17"
+            "version": "==0.2.18"
         },
         "simpervisor": {
             "hashes": [
