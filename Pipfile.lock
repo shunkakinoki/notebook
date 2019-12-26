@@ -972,10 +972,10 @@
         },
         "pyparsing": {
             "hashes": [
-                "sha256:20f995ecd72f2a1f4bf6b072b63b22e2eb457836601e76d6e5dfcd75436acc1f",
-                "sha256:4ca62001be367f01bd3e92ecbb79070272a9d4964dce6a48a82ff0b8bc7e683a"
+                "sha256:4c830582a84fb022400b85429791bc551f1f4871c33f23e44f353119e92f969f",
+                "sha256:c342dccb5250c08d45fd6f8b4a559613ca603b57498511740e65cd11a2e7dcec"
             ],
-            "version": "==2.4.5"
+            "version": "==2.4.6"
         },
         "pyrsistent": {
             "hashes": [
@@ -1163,11 +1163,11 @@
         },
         "shun-notebook": {
             "hashes": [
-                "sha256:26c9467859a87adcef8db69d7f1056598ebf40bfb2ab9b2639e55c146f60e29e",
-                "sha256:5f88d95e2f55a7934ec613a9a41e406774f3cfd39acb9671a1b2b07f88bdc3a9"
+                "sha256:4cab304a6525f558d26c7af18a3289748a697d9bf31d3612324c8b36c97f5da4",
+                "sha256:d776c7c1d530610c350ee404f283d7c061cbfaad7679eeb6339cf86de72b938a"
             ],
             "index": "pypi",
-            "version": "==0.2.21"
+            "version": "==0.2.24"
         },
         "simpervisor": {
             "hashes": [
