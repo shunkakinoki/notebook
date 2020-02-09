@@ -21,6 +21,7 @@ jobs:
       - name: Install dependencies with pipenv
         if: steps.cache.outputs.cache-hit != 'true'
         run: |
+          pipenv --rm
           pipenv install --deploy --ignore-pipfile --system
           pipenv sync --dev
         env:
