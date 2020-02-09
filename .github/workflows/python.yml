@@ -27,3 +27,5 @@ jobs:
       - name: Run test with Tox
         run: |
           pipenv run tox -e libs,flake8,mypy,format -p all
+        env:
+          PIPENV_VENV_IN_PROJECT: true
