@@ -22,7 +22,7 @@ shun-notebook = "*"
 [packages]
 
 [pipenv]
-allow_prereleases = true
+allow_prereleases = false
 
 [requires]
 python_version = "3.7"
