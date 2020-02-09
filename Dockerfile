@@ -6,7 +6,7 @@
 FROM gcr.io/kaggle-images/python:v71
 
 # Install Basic Utilities
-RUN apt-get update &&
+RUN apt-get update && \
     apt-get install -y --no-install-recommends \
         curl \
         ca-certificates \
@@ -15,13 +15,13 @@ RUN apt-get update &&
         bzip2 \
         libx11-6 \
         libffi-dev \
-        software-properties-common &&
+        software-properties-common && \
     rm -rf /var/lib/apt/lists/*
 
 # Install Jq to Parse Json within Bash Scripts
 # Reference:
 # https://hub.docker.com/r/pindar/jq/dockerfile
-RUN curl -o /usr/local/bin/jq http://stedolan.github.io/jq/download/linux64/jq &&
+RUN curl -o /usr/local/bin/jq http://stedolan.github.io/jq/download/linux64/jq && \
     chmod +x /usr/local/bin/jq
 
 # Install Node JS

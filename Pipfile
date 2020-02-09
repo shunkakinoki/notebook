@@ -18,6 +18,7 @@ twine = "*"
 wheel = "*"
 secretstorage = "*"
 shun-notebook = "*"
+nbdev = "*"
 
 [packages]
 
