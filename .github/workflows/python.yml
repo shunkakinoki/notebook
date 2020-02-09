@@ -4,7 +4,7 @@ jobs:
   python:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
       - name: Set up Python 3.7
         uses: actions/setup-python@v1
         with:
@@ -29,4 +29,4 @@ jobs:
           PIPENV_VENV_IN_PROJECT: true
       - name: Run test with Tox
         run: |
-          pipenv run tox -e libs,flake8,mypy,format -p all
+          tox -e libs,flake8,mypy,format -p all
