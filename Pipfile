@@ -6,7 +6,6 @@ verify_ssl = true
 [dev-packages]
 black = "==19.3b0"
 dvc = {extras = ["aws", "gs"],version = "*"}
-invoke = "*"
 isort = "*"
 jupyterlab = "*"
 jupyterlab-nvdashboard = "*"
@@ -29,7 +28,6 @@ allow_prereleases = true
 python_version = "3.7"
 
 [scripts]
-check = "invoke check"
-format = "invoke format"
-libs = "invoke libs"
+check = "make check"
+format = "make format"
 test = "tox -p all"
