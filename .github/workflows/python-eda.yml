@@ -24,7 +24,7 @@ jobs:
       - name: Install dependencies with pipenv
         if: steps.cache.outputs.cache-hit != 'true'
         run: |
-          pipenv sync --dev
+          pipenv install --deploy --ignore-pipfile --system
         env:
           PIPENV_VENV_IN_PROJECT: true
       - name: Run test with Tox
