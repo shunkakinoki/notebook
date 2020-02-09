@@ -24,3 +24,10 @@ clean:
 
 build:
 	docker-compose pull && docker-compose up --build
+
+check:
+	pipenv run flake8 .
+
+format:
+	pipenv run isort . --recursive \
+	&& pipenv run black .

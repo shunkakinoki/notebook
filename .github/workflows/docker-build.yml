@@ -9,8 +9,8 @@ jobs:
         run: |
           cd $GITHUB_WORKSPACE
           echo ${PASSWORD} | docker login -u $USERNAME --password-stdin
-          git diff -a --exit-code --no-ext-diff --no-prefix --unified=0 origin/master... Dockerfile | egrep "^\+" | grep -q "FROM" && true || docker pull $BASE_NAME
           docker build --cache-from $BASE_NAME -t $BASE_NAME -f Dockerfile .
+        #   git diff -a --exit-code --no-ext-diff --no-prefix --unified=0 origin/master... Dockerfile | egrep "^\+" | grep -q "FROM" && true || docker pull $BASE_NAME
         env:
           USERNAME: ${{ secrets.DOCKER_USERNAME }}
           PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
