@@ -22,10 +22,9 @@ jobs:
         if: steps.cache.outputs.cache-hit != 'true'
         run: |
           pipenv install --deploy --ignore-pipfile --system
+          pipenv sync --dev
         env:
           PIPENV_VENV_IN_PROJECT: true
       - name: Run test with Tox
         run: |
           pipenv run tox -e libs,flake8,mypy,format -p all
-        env:
-          PIPENV_VENV_IN_PROJECT: true
