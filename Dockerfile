@@ -53,7 +53,7 @@ RUN pip install -r requirements.txt
 # Install Jupyter Lab Extensions
 RUN jupyter labextension install @jupyter-widgets/jupyterlab-manager
 RUN jupyter labextension install @jupyterlab/git
-RUN jupyter labextension install @jupyterlab/plotly-extension
+# RUN jupyter labextension install @jupyterlab/plotly-extension
 RUN jupyter labextension install @jupyterlab/toc
 RUN jupyter labextension install @krassowski/jupyterlab-lsp
 RUN jupyter labextension install @lckr/jupyterlab_variableinspector
