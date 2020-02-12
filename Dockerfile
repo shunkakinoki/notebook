@@ -28,6 +28,7 @@ RUN curl -o /usr/local/bin/jq http://stedolan.github.io/jq/download/linux64/jq &
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 RUN curl -sL https://deb.nodesource.com/setup_12.x | bash -
 RUN apt-get -y --no-install-recommends install nodejs
+RUN npm cache clean
 
 # Install Pip3 Pipenv
 RUN pip install pipenv==2018.11.26
