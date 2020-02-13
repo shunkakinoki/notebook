@@ -687,11 +687,11 @@
         },
         "nbdev": {
             "hashes": [
-                "sha256:1501c53109a6eff6e14328172489bd3279c11106e808c23a7035836dd9ba45f9",
-                "sha256:dee0934e6285c7c550b31d62c770f8c7229f825fcf211b855912c139d32fe37e"
+                "sha256:901c59161db632dc3f6a93f57d12035a124d7d9b96adf9c68e03b6af84b3e8eb",
+                "sha256:fa569e3ee4d6fecb6a8bbedb73965c6b46390bae51169af3e7f57025d0ed5762"
             ],
             "index": "pypi",
-            "version": "==0.2.9"
+            "version": "==0.2.11"
         },
         "nbformat": {
             "hashes": [
