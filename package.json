@@ -9,8 +9,8 @@
     "url": "https://github.com/shunkakinoki/notebook.git"
   },
   "scripts": {
-    "cm": "npx git-cz",
-    "commit": "npx git-cz",
+    "cm": "yarn git-cz",
+    "commit": "yarn git-cz",
     "test": "yarn run lint && yarn run release-test",
     "release": "semantic-release",
     "release-test": "semantic-release -d",
@@ -22,7 +22,9 @@
   "devDependencies": {
     "@semantic-release/changelog": "^5.0.0",
     "@semantic-release/exec": "^5.0.0",
+    "commitizen": "^4.0.3",
     "eclint": "^2.8.1",
+    "git-cz": "^4.3.1",
     "semantic-release": "^17.0.4"
   }
 }
