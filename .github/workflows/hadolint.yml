@@ -4,8 +4,8 @@ jobs:
   hadolint:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
-      - name: hadolint on pr
+      - uses: actions/checkout@v2
+      - name: Hadolint on pr
         uses: burdzwastaken/hadolint-action@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
