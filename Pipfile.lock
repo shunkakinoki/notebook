@@ -257,11 +257,11 @@
                 "gs"
             ],
             "hashes": [
-                "sha256:125baf3e5f1c9acde573a46e0260bfa9110fffe08dc18e829988d5cfc193ef93",
-                "sha256:fb2587ee5ef26705cd1b727e1401cb3ca64543349512ef56cd2f62f03cde2a02"
+                "sha256:7876147a2dfb07c8084c77d5df03d58ac1bb6a819288d51478ea30c499912b6f",
+                "sha256:a1ada9c7e69af7a91dccfb5558add8ae6549a0390a4c1cf8f5e83c5daf008b27"
             ],
             "index": "pypi",
-            "version": "==0.86.2"
+            "version": "==0.86.4"
         },
         "entrypoints": {
             "hashes": [
