@@ -65,7 +65,7 @@ setuptools.setup(
     zip_safe=False,
     entry_points={"console_scripts": cfg.get("console_scripts", "").split()},
     use_scm_version=True,
-    version_format='{tag}',
-    setup_requires=['setuptools-git-version'],
+    version_format="{tag}",
+    setup_requires=["setuptools-git-version"],
     **setup_cfg
 )
