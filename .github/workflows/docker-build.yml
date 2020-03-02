@@ -5,13 +5,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Build Docker Image with DockerHub
-        run: |
-          cd $GITHUB_WORKSPACE
-          echo ${PASSWORD} | docker login -u $USERNAME --password-stdin
-          docker build --cache-from $BASE_NAME -t $BASE_NAME -f Dockerfile .
-        #   git diff -a --exit-code --no-ext-diff --no-prefix --unified=0 origin/master... Dockerfile | egrep "^\+" | grep -q "FROM" && true || docker pull $BASE_NAME
-        env:
-          USERNAME: ${{ secrets.DOCKER_USERNAME }}
-          PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
-          BASE_NAME: ${{ github.repository }}
+      - uses: whoan/docker-build-with-cache-action@v4
+        with:
+          username: "${{ secrets.DOCKER_USERNAME }}"
+          password: "${{ secrets.DOCKER_PASSWORD }}"
+          image_name: shunkakinoki/notebook
+          push_image_and_stages: false
