@@ -39,3 +39,14 @@ jobs:
           branch-suffix: short-commit-hash
         env:
           HUSKY_SKIP_HOOKS: 1
+  publish:
+    needs: release
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: whoan/docker-build-with-cache-action@v4
+        with:
+          username: "${{ secrets.DOCKER_USERNAME }}"
+          password: "${{ secrets.DOCKER_PASSWORD }}"
+          image_name: shunkakinoki/notebook
+          push_git_tag: true
