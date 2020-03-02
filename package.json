@@ -12,12 +12,10 @@
     "test": "yarn lint && yarn release-test",
     "release": "semantic-release",
     "release-test": "semantic-release -d",
-    "lint": "yarn eclint-check && yarn prettier-check",
-    "fix": "yarn eclint-fix && yarn prettier-fix",
+    "lint": "yarn eclint-check",
+    "fix": "yarn eclint-fix",
     "eclint-check": "eclint check $(git ls-files)",
-    "eclint-fix": "eclint fix $(git ls-files)",
-    "prettier-check": "prettier --check \"**/*.{json}\"",
-    "prettier-fix": "prettier --write \"**/*.{json}\""
+    "eclint-fix": "eclint fix $(git ls-files)"
   },
   "devDependencies": {
     "@semantic-release/changelog": "^5.0.0",
