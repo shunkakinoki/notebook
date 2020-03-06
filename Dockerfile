@@ -3,7 +3,7 @@
 # https://github.com/pypa/pipenv/blob/master/Dockerfile
 # https://github.com/kiccho1101/kaggle-python-docker/blob/master/Dockerfile
 
-FROM gcr.io/kaggle-images/python:v73
+FROM gcr.io/kaggle-images/python:v74
 
 # Install Basic Utilities
 RUN apt-get update && \
