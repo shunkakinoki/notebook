@@ -46,9 +46,17 @@ jobs:
       - uses: actions/checkout@v2
       - name: Fetch git tags
         run: git fetch --depth=1 origin +refs/tags/*:refs/tags/*
+      - name: Extract tag name
+        id: tag
+        uses: actions/github-script@0.2.0
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            return context.payload.ref.replace(/\/refs\/tags\//, '');
       - uses: whoan/docker-build-with-cache-action@v4
         with:
           username: "${{ secrets.DOCKER_USERNAME }}"
           password: "${{ secrets.DOCKER_PASSWORD }}"
           image_name: shunkakinoki/notebook
+          image_tag: latest,${{ GITHUB_SHA }},${{ steps.tag.outputs.result }}
           push_git_tag: true
