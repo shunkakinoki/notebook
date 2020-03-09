@@ -7,7 +7,6 @@
 FROM jupyter/scipy-notebook:e255f1aa00b2
 
 # Create a working directory
-RUN mkdir /app
 WORKDIR /app
 
 # Adding Pipfiles
