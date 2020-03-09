@@ -44,13 +44,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Get release tag
-        id: tag
-        run: echo ::set-output name=tag::$(echo ${GITHUB_REF:10})
+      - name: Get git ref
+        id: ref
+        run: echo "::set-output name=ref::${GITHUB_REF##*/}"
+      - name: Get git version
+        id: version
+        run: echo ::set-output name=version::${GITHUB_REF#refs/tags/}
       - uses: whoan/docker-build-with-cache-action@v4
         with:
           username: "${{ secrets.DOCKER_USERNAME }}"
           password: "${{ secrets.DOCKER_PASSWORD }}"
           image_name: shunkakinoki/notebook
-          image_tag: latest,${{ steps.tag.outputs.tag }}
+          image_tag: latest,${{ steps.ref.outputs.ref }},${{ steps.version.outputs.version }}
           push_git_tag: true
