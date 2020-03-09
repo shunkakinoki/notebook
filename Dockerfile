@@ -15,7 +15,7 @@ COPY Pipfile Pipfile
 COPY Pipfile.lock Pipfile.lock
 
 # Install Libraries
-RUN pip3 install pipenv==2018.11.26
+RUN python3 generate.py > requirements.txt
 
 # Install Dependencies
-RUN set -ex && pipenv install --dev --system --ignore-pipfile
+RUN pip3 install -r requirements.txt
