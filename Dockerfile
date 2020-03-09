@@ -4,7 +4,7 @@
 # https://github.com/kiccho1101/kaggle-python-docker/blob/master/Dockerfile
 # https://github.com/kiccho1101/datascience-docker-light/blob/master/Dockerfile
 
-FROM python:3.8-alpine
+FROM python:3.7-alpine
 
 # Create a working directory
 RUN mkdir /app
