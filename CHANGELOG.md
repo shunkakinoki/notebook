@@ -1,3 +1,11 @@
+## [1.0.4](https://github.com/shunkakinoki/notebook/compare/v1.0.3...v1.0.4) (2020-03-09)
+
+
+### Bug Fixes
+
+* 🐛 editorconfig ([9f2d679](https://github.com/shunkakinoki/notebook/commit/9f2d67998b8ad0c7505272618616f8ba1940752b))
+* 🐛 nbde ([462fce3](https://github.com/shunkakinoki/notebook/commit/462fce313d63637b5a5647bca14b3f61475c82ad))
+
 ## [1.0.3](https://github.com/shunkakinoki/notebook/compare/v1.0.2...v1.0.3) (2020-03-09)
 
 
