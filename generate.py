@@ -14,12 +14,7 @@ def main():
 
     for name, pkg in root["develop"].items():
         version = pkg["version"]
-        sep = lambda i: "" if i == len(pkg["hashes"]) - 1 else " \\"
-        hashes = [f"--hash={t}{sep(i)}" for i, t in enumerate(pkg["hashes"])]
-        tail = "" if len(hashes) == 0 else f" {hashes[0]}"
-        print(f"{name} {version}{tail}")
-        for h in hashes[1:]:
-            print(f"    {h}")
+        print(f"{name} {version}")
 
 
 if __name__ == "__main__":
