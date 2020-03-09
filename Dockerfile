@@ -6,19 +6,6 @@
 
 FROM jupyter/scipy-notebook:e255f1aa00b2
 
-# Install Basic Utilities
-RUN apt-get update && \
-    apt-get install -y --no-install-recommends \
-    curl && \
-    apt-get clean && \
-    rm -rf /var/lib/apt/lists/*
-
-# Install Jq to Parse Json within Bash Scripts
-# Reference:
-# https://hub.docker.com/r/pindar/jq/dockerfile
-RUN curl -o /usr/local/bin/jq http://stedolan.github.io/jq/download/linux64/jq && \
-    chmod +x /usr/local/bin/jq
-
 # Create a working directory
 RUN mkdir /app
 WORKDIR /app
@@ -27,12 +14,8 @@ WORKDIR /app
 COPY Pipfile Pipfile
 COPY Pipfile.lock Pipfile.lock
 
-# Generate `requirements.txt`
-RUN jq -r '.default | to_entries[] | .key + .value.version' \
-    Pipfile.lock >requirements.txt
-
 # Install Libraries
-RUN pip install -r requirements.txt
+RUN pip install pipenv==2018.11.26
 
 # Install Dependencies
-# RUN set -ex && pipenv install --dev --system --ignore-pipfile --deploy
+RUN set -ex && pipenv install --dev --system --ignore-pipfile --deploy
