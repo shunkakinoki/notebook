@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/shunkakinoki/notebook/compare/v1.0.1...v1.0.2) (2020-03-09)
+
+
+### Bug Fixes
+
+* 🐛 release ([d180b95](https://github.com/shunkakinoki/notebook/commit/d180b95121860059fd3ce868d96c78d0e48ea7af))
+
 # [1.0.0](https://github.com/shunkakinoki/notebook/compare/v0.6.0...v1.0.0) (2020-03-09)
 
 
