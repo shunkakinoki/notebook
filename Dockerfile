@@ -18,4 +18,4 @@ COPY Pipfile.lock Pipfile.lock
 RUN pip3 install pipenv==2018.11.26
 
 # Install Dependencies
-RUN set -ex && pipenv install --dev --system --ignore-pipfile --deploy
+RUN set -ex && pipenv install --dev --system --ignore-pipfile
