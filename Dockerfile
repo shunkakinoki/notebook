@@ -6,6 +6,12 @@
 
 FROM jupyter/scipy-notebook:e255f1aa00b2
 
+# Install Basic Utilities
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends \
+    curl && \
+    rm -rf /var/lib/apt/lists/*
+
 # Install Jq to Parse Json within Bash Scripts
 # Reference:
 # https://hub.docker.com/r/pindar/jq/dockerfile
