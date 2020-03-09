@@ -16,6 +16,10 @@ def main():
         version = pkg["version"]
         print(f"{name}{version}")
 
+    for name, pkg in root["default"].items():
+        version = pkg["version"]
+        print(f"{name}{version}")
+
 
 if __name__ == "__main__":
     main()

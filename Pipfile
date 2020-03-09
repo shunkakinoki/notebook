@@ -12,6 +12,7 @@ nbdev = "*"
 jupyter-client = "*"
 
 [packages]
+jupyter = "*"
 
 [pipenv]
 allow_prereleases = false
