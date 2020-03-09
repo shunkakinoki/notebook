@@ -52,6 +52,6 @@ jobs:
           username: "${{ secrets.DOCKER_USERNAME }}"
           password: "${{ secrets.DOCKER_PASSWORD }}"
           image_name: shunkakinoki/notebook
-          image_tag: latest
+          image_tag: latest,${{ github.event.pull_request.head.sha }},${{ steps.tag.outputs.tag }}
           push_git_tag: true
           pull_image_and_stages: false
