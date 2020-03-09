@@ -14,7 +14,7 @@ def main():
 
     for name, pkg in root["develop"].items():
         version = pkg["version"]
-        print(f"{name} {version}")
+        print(f"{name}{version}")
 
 
 if __name__ == "__main__":
