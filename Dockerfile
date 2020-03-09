@@ -13,6 +13,7 @@ WORKDIR /app
 # Adding Pipfiles
 COPY Pipfile Pipfile
 COPY Pipfile.lock Pipfile.lock
+COPY generate.py generate.py
 
 # Install Libraries
 RUN python3 generate.py > requirements.txt
