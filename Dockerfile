@@ -1,10 +1,13 @@
-# References:
-# https://github.com/anibali/docker-pytorch/blob/master/cuda-10.0/Dockerfile
-# https://github.com/pypa/pipenv/blob/master/Dockerfile
-# https://github.com/kiccho1101/kaggle-python-docker/blob/master/Dockerfile
-# https://github.com/kiccho1101/datascience-docker-light/blob/master/Dockerfile
+FROM ubuntu:18.04
 
-FROM python:3.7-alpine
+# Install Basic Utilities
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends \
+    python3-dev \
+    python3-pip \
+    build-essential \
+    libzmq3-dev && \
+    rm -rf /var/lib/apt/lists/*
 
 # Create a working directory
 RUN mkdir /app
