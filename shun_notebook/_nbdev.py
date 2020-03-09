@@ -2,11 +2,13 @@
 
 __all__ = ["index", "modules", "custom_doc_links", "git_url"]
 
-index = {}  # type: ignore
+index = {}
 
-modules = []  # type: ignore
+modules = []
 
-git_url = "https://github.com/shunkakinoki/notebook/tree/master/"
+doc_url = "https://shunkakinoki.github.io/shun_notebook/"
+
+git_url = "https://github.com/shunkakinoki/shun_notebook/tree/master/"
 
 
 def custom_doc_links(name):

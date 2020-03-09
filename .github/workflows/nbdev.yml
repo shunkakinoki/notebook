@@ -41,6 +41,6 @@ jobs:
       - name: Check if there is no diff library/notebooks
         run: |
           if [-n "$(pipenv run nbdev_diff_nbs)"]; then echo -e "!!! Detected difference between the notebooks and the library"; false; fi
-      - name: Run tests
-        run: |
-          pipenv run nbdev_test_nbs
+      # - name: Run tests
+      #   run: |
+      #     pipenv run nbdev_test_nbs

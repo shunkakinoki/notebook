@@ -11,3 +11,4 @@ jobs:
           password: "${{ secrets.DOCKER_PASSWORD }}"
           image_name: shunkakinoki/notebook
           push_image_and_stages: false
+          pull_image_and_stages: false
