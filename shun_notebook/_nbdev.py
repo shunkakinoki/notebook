@@ -10,5 +10,6 @@ doc_url = "https://shunkakinoki.github.io/shun_notebook/"
 
 git_url = "https://github.com/shunkakinoki/shun_notebook/tree/master/"
 
+
 def custom_doc_links(name):
     return None
