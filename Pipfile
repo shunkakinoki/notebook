@@ -5,20 +5,6 @@ verify_ssl = true
 
 [dev-packages]
 black = "==19.3b0"
-dvc = {extras = ["aws", "gs"],version = "*"}
-isort = "*"
-jupyterlab = "*"
-jupyterlab-nvdashboard = "*"
-metaflow = "*"
-mypy = "*"
-pep8 = "*"
-python-language-server = {extras = ["all"],version = "*"}
-tox = "*"
-twine = "*"
-wheel = "*"
-secretstorage = "*"
-shun-notebook = "*"
-nbdev = "*"
 
 [packages]
 
