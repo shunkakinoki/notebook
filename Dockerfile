@@ -4,9 +4,10 @@
 # https://github.com/kiccho1101/kaggle-python-docker/blob/master/Dockerfile
 # https://github.com/kiccho1101/datascience-docker-light/blob/master/Dockerfile
 
-FROM jupyter/scipy-notebook:e255f1aa00b2
+FROM python:3.8-alpine
 
 # Create a working directory
+RUN mkdir /app
 WORKDIR /app
 
 # Adding Pipfiles
@@ -14,7 +15,7 @@ COPY Pipfile Pipfile
 COPY Pipfile.lock Pipfile.lock
 
 # Install Libraries
-RUN pip install pipenv==2018.11.26
+RUN pip3 install pipenv==2018.11.26
 
 # Install Dependencies
 RUN set -ex && pipenv install --dev --system --ignore-pipfile --deploy
