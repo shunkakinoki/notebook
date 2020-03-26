@@ -604,11 +604,11 @@
         },
         "nbdev": {
             "hashes": [
-                "sha256:9a3b3f630818b4ae987d8357982847d1cd4cdf008f7e68396c4854f494cda2ac",
-                "sha256:af11209c76736be58d5efcbcf2c0c2acecae49250536f48757f9ada3b018ed80"
+                "sha256:1f3f5bc08a8a058983f08ef24d7050aee222a3052c4b397c2b1e1689c891305d",
+                "sha256:aaebb180966bbe379d8821adbdaf2d8c0a489d3bc92eacece35df5bb904835a6"
             ],
             "index": "pypi",
-            "version": "==0.2.15"
+            "version": "==0.2.16"
         },
         "nbformat": {
             "hashes": [
