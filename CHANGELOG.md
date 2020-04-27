@@ -1,3 +1,10 @@
+## [1.0.5](https://github.com/shunkakinoki/notebook/compare/v1.0.4...v1.0.5) (2020-04-27)
+
+
+### Bug Fixes
+
+* **deps:** bump ubuntu from 18.04 to 20.04 ([f3c6f33](https://github.com/shunkakinoki/notebook/commit/f3c6f33d82de79fb8578bb665b64d467b77709bd))
+
 ## [1.0.4](https://github.com/shunkakinoki/notebook/compare/v1.0.3...v1.0.4) (2020-03-09)
 
 
