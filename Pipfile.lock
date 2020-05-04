@@ -618,11 +618,11 @@
         },
         "nbdev": {
             "hashes": [
-                "sha256:31e9a97a2bbaaeb9e05e4b81e7189f4007f3a631b846a7f8a009bfae68d7bf9f",
-                "sha256:be1c2f82d5a752100eab826db5ff2a261dd9ae846bfaf398369ae6f9776ee9e5"
+                "sha256:2f93d12c54757fb0723ccc67589d8705fc0a873f367cfa79872b80370d4d2c07",
+                "sha256:d2f81b8157bdec9f8d177ed843fcec6494cc6e64c58f88211c407937d6c049f9"
             ],
             "index": "pypi",
-            "version": "==0.2.17"
+            "version": "==0.2.18"
         },
         "nbformat": {
             "hashes": [
