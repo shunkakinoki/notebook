@@ -488,10 +488,10 @@
         },
         "fastscript": {
             "hashes": [
-                "sha256:a0fd479b17ac063d4005d72140280b426f66ee503fb39dc5e4c2550fb28ba19a",
-                "sha256:c495d13b827963981568a7f48cb5291cafef7f3cbc6adbb6f0cb1e4db26f4ca3"
+                "sha256:469c7f36aa5307d92aea6ab8324145f41b0519e87068909412d3615e514ab4c1",
+                "sha256:edcae4026c1abed6851cad68271a75976d4d55f6dd6aa1c1cc36035d6292d9f0"
             ],
-            "version": "==0.1.4"
+            "version": "==0.1.5"
         },
         "filelock": {
             "hashes": [
@@ -620,11 +620,11 @@
         },
         "nbdev": {
             "hashes": [
-                "sha256:31e9a97a2bbaaeb9e05e4b81e7189f4007f3a631b846a7f8a009bfae68d7bf9f",
-                "sha256:be1c2f82d5a752100eab826db5ff2a261dd9ae846bfaf398369ae6f9776ee9e5"
+                "sha256:2889bf2429ddfa887c8f2d42fe571abd72bc944319f6c1cb80d3a5b0e6dfe776",
+                "sha256:8a1dca52e7ca0ac7546209cfcdd5607059d41edd5c106aec7f1e720762e4d08e"
             ],
             "index": "pypi",
-            "version": "==0.2.17"
+            "version": "==0.2.20"
         },
         "nbformat": {
             "hashes": [
@@ -861,10 +861,10 @@
         },
         "virtualenv": {
             "hashes": [
-                "sha256:26cdd725a57fef4c7c22060dba4647ebd8ca377e30d1c1cf547b30a0b79c43b4",
-                "sha256:c51f1ba727d1614ce8fd62457748b469fbedfdab2c7e5dd480c9ae3fbe1233f1"
+                "sha256:688a61d7976d82b92f7906c367e83bb4b3f0af96f8f75bfcd3da95608fe8ac6c",
+                "sha256:8f582a030156282a9ee9d319984b759a232b07f86048c1d6a9e394afa44e78c8"
             ],
-            "version": "==20.0.27"
+            "version": "==20.0.28"
         },
         "webencodings": {
             "hashes": [
